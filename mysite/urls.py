@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from myapp.views import hello 
+from myapp.views import about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',hello)
+    path('',hello),# '' --- principal rute
+    path("about/",about)
 ]
