@@ -4,9 +4,9 @@ from django.db import models
 
 #connection in sttings of file mysite
 class Project(models.Model):
-    nama = models.CharField(max_length=200)
+    name = models.CharField(max_length=200)
     
-class Talk(models.Model):
+class Task(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
