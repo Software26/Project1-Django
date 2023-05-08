@@ -5,13 +5,15 @@ from django.shortcuts import get_object_or_404
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Index")
+    return render(request,"index.html")
+
+def about(request):
+    return render(request,"about.html")
+
 
 def hello(request,username):
     return HttpResponse("<h1>Hello %s </h1>" % username) # here a param
 
-def about(request):
-    return HttpResponse("<h1>About</h1>")
 
 def project(request):
     projects = list(Project.objects.values())
