@@ -16,9 +16,10 @@ def hello(request,username):
 
 
 def project(request):
-    projects = list(Project.objects.values())
-    return JsonResponse(projects, safe=False)
+   # projects = list(Project.objects.values())
+    return render(request,"project.html")
 
-def tasks(request, id):
-    task = get_object_or_404(Task, id=id)
-    return HttpResponse("Task: %s "% task.title)
+def tasks(request):
+    #task = get_object_or_404(Task, id=id)
+    return render(request,"task.html")
+
