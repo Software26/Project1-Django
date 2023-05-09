@@ -19,9 +19,15 @@ def hello(request,username):
 
 def project(request):
    # projects = list(Project.objects.values())
-    return render(request,"project.html")
+    projects = Project.objects.all()
+    return render(request,"project.html", {
+        "projects" : projects
+    })
 
 def tasks(request):
     #task = get_object_or_404(Task, id=id)
-    return render(request,"task.html")
+    tasks = Task.objects.all()
+    return render(request,"task.html",{
+        "tasks": tasks
+    })
 
