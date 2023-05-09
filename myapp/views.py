@@ -9,7 +9,8 @@ def index(request):
     return render(request,"index.html",{"title":title})
 
 def about(request):
-    return render(request,"about.html")
+    username = " ****it n/'s a hello for about***"
+    return render(request,"about.html",{"username" : username})
 
 
 def hello(request,username):
