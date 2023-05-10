@@ -4,10 +4,16 @@
 
 <article>
 <h1>{{ task.title }}</h1>
-<p>{{task.description}}</p>
-<p>Project: {{task.project.name}}</p> 
-<button>&#128465; Delete</button>
-<button>&#9989; Done</button>
+
+{% if task.done == False %}
+<p>Tarea pendiente</P>
+{% endif %}
+
+
+<p>{{task.description}}</p> <!--Description task note: SQL-->
+<p>Project: {{task.project.name}}</p> <!--here relation with the project task -->
+<button>&#128465; Delete</button><!--Button for delete-->
+<button>&#9989; Done</button> <!--Button for update-->
 
 </article>
 
