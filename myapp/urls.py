@@ -10,4 +10,5 @@ urlpatterns = [
     path('hello/<int:username>', views.hello),
     path("project/", views.project),
     path("tasks/", views.tasks),
+    path("create_task/", views.create_task),
 ]
