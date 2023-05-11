@@ -3,10 +3,13 @@
 {% for task in tasks %}
 
 <article>
-<h1>{{ task.title }}</h1>
+<h1>{% if task.done == False %} &#128546; {% else %} &#9989; {{ task.title }} </h1>
 
-{% if task.done == False %}
-<p>Tarea pendiente</P>
+
+
+
+<p>Tarea completada </P>
+
 {% endif %}
 
 
